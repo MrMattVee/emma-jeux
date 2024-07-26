@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@layer base {
+  body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: #F0F4F8;
+    color: #4A4A4A;
+  }
+
+  h1, h2, h3 {
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  .btn {
+    @apply cursor-pointer border-none rounded-lg transition-transform duration-100;
+  }
+
+  .btn:hover {
+    @apply scale-105;
+  }
+
+  .btn:active {
+    @apply scale-95;
+  }
+}
+
+@layer utilities {
+  .congratulations {
+    animation: bounce 0.5s infinite alternate;
+  }
+
+  @keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+  }
+}
